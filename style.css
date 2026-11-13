@@ -1,0 +1,89 @@
+/* ===== Mes styles de couleur (comme dans Figma) ===== */
+:root {
+  --fond: #0F0A0B;
+  --fond-secondaire: #1A1113;
+  --titres: #F2ECE9;
+  --texte-secondaire: #BDB2B2;
+  --texte-secondaire-50: rgba(189, 178, 178, 0.5);
+  --cuivre: #D9925A;
+}
+
+/* ===== Toute la page ===== */
+body {
+  margin: 0;                              /* supprime la marge blanche ajoutée par défaut */
+  background-color: var(--fond);          /* fond sombre */
+  color: var(--texte-secondaire);         /* couleur du texte par défaut */
+  font-family: 'Manrope', sans-serif;     /* police par défaut */
+  font-size: 16px;
+  line-height: 1.6;                       /* espace entre les lignes, plus confortable */
+  display: flex;                          /* range la sidebar et le contenu côte à côte */
+}
+
+/* Style "Signature" : ton nom */
+.nom {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--cuivre);
+  text-transform: uppercase;    /* met le texte en majuscules */
+  letter-spacing: 0.1em;        /* espace les lettres */
+}
+
+/* Style "Titre principal" : l'accroche */
+.accroche {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.1;
+  color: var(--titres);
+}
+
+/* Style "Titre de section" : tous les h2 */
+h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--titres);
+}
+
+/* Style "Bouton" : numéros de section et titres de cartes */
+.numero,
+.titre-carte {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cuivre);
+}
+
+/* ===== La sidebar ===== */
+.sidebar {
+  width: 240px;                           /* largeur fixe, comme dans Figma */
+  flex-shrink: 0;                         /* empêche la sidebar de rétrécir */
+  box-sizing: border-box;                 /* le padding est compté DANS les 240px */
+  padding: 48px 32px;                     /* 48 en haut et en bas, 32 sur les côtés */
+  background-color: var(--fond-secondaire);
+
+  /* La sidebar reste visible quand on fait défiler la page */
+  position: sticky;
+  top: 0;
+  height: 100vh;                             /* 100vh = toute la hauteur de l'écran */
+  align-self: flex-start;
+
+  /* Auto Layout vertical, comme dans Figma */
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ===== La zone de contenu ===== */
+.contenu {
+  flex: 1;                                /* "Remplir le conteneur" : prend toute la place restante */
+  padding: 96px 80px;                     /* tes marges Figma */
+}
