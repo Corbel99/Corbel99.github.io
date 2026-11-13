@@ -34,6 +34,7 @@ body {
 /* Style "Titre principal" : l'accroche */
 .accroche {
   margin: 0;
+  margin-bottom: ;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
   font-size: 64px;
@@ -85,5 +86,87 @@ h2 {
 /* ===== La zone de contenu ===== */
 .contenu {
   flex: 1;                                /* "Remplir le conteneur" : prend toute la place restante */
-  padding: 96px 80px;                     /* tes marges Figma */
+  padding: 96px 80px;
+  display: flex;                          /* Auto Layout */
+  flex-direction: column;                 /* les sections les unes sous les autres */
+  gap: 120px;                             /* espace Figma entre les sections */
+  max-width: 1200px;                      /* largeur max, comme le frame Figma */
+  box-sizing: border-box;                 /* le padding est compté dans les 1200px */
+}
+
+/* ===== Identité : nom + titre ===== */
+.identite {
+  display: flex;
+  flex-direction: column;                 /* l'un sous l'autre */
+  gap: 16px;                              /* espacement Figma */
+  text-align: center;                     /* textes centrés */
+}
+
+.titre {
+  margin: 0;
+}
+
+/* ===== Le menu ===== */
+.menu ul {
+  list-style: none;                       /* supprime les puces */
+  margin: 0;
+  padding: 0;                             /* supprime le décalage à gauche des listes */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                              /* espacement Figma entre les liens */
+}
+
+.menu a {
+  color: var(--texte-secondaire);         /* fini le bleu et le violet */
+  text-decoration: none;                  /* supprime le soulignement */
+}
+
+/* Le lien actif, et n'importe quel lien survolé par la souris, passent en cuivre */
+.menu a:hover,
+.menu .actif {
+  color: var(--cuivre);
+}
+
+/* ===== Les boutons (style commun) ===== */
+.bouton {
+  display: inline-block;                  /* permet au lien d'avoir des marges, comme une boîte */
+  padding: 14px 24px;                     /* marges Figma : 14 en haut/bas, 24 sur les côtés */
+  background-color: var(--cuivre);
+  color: var(--fond);                     /* texte sombre sur fond cuivre */
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ===== Blocs de textes (numéro + titre + paragraphe) ===== */
+.intro-texte {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                              /* espacement Figma */
+}
+
+.presentation {
+  margin: 0;
+  max-width: 520px;                       /* largeur max du paragraphe, comme dans Figma */
+}
+
+/* ===== Section 01 : Qui suis-je ? ===== */
+#qui {
+  display: flex;                          /* côte à côte (direction par défaut : ligne) */
+  align-items: center;                    /* centrés verticalement, comme dans Figma */
+  gap: 48px;
+}
+
+#qui .intro-texte {
+  flex: 1;                                /* le texte prend la place restante */
+}
+
+.photo {
+  width: 360px;
+  height: 450px;
+  flex-shrink: 0;                         /* la photo garde sa taille */
+  background-color: var(--fond-secondaire);  /* rectangle provisoire */
 }
