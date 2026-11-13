@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Corbel · Développeur full-stack</title>
-    <link rel="stylesheet" href="style.css">
-        <!-- Charge les polices depuis Google Fonts -->
+
+    <!-- Charge les polices depuis Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;500;600&display=swap">
+
+    <!-- Mon fichier CSS -->
+    <link rel="stylesheet" href="style.css">
   </head>
 <body>
 
+  <!-- La sidebar : nom, menu, bouton CV -->
   <aside class="sidebar">
 
     <div class="identite">
@@ -21,13 +25,13 @@
 
     <nav class="menu">
       <ul>
-         <li><a href="#qui" class="actif">Qui suis-je ?</a></li>
-         <li><a href="#alternance">Mon alternance</a></li>
-         <li><a href="#formation">Ma formation</a></li>
-         <li><a href="#competences">Compétences & outils</a></li>
-         <li><a href="#apprentissage">En cours d'apprentissage</a></li>
-         <li><a href="#artiste">Côté artiste</a></li>
-         <li><a href="#contact">Contact</a></li>
+        <li><a href="#qui" class="actif">Qui suis-je ?</a></li>
+        <li><a href="#alternance">Mon alternance</a></li>
+        <li><a href="#formation">Ma formation</a></li>
+        <li><a href="#competences">Compétences & outils</a></li>
+        <li><a href="#apprentissage">En cours d'apprentissage</a></li>
+        <li><a href="#artiste">Côté artiste</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -35,22 +39,25 @@
 
   </aside>
 
+  <!-- Le contenu principal : les 7 sections -->
   <main class="contenu">
 
+    <!-- ===== 01 — Qui suis-je ? ===== -->
     <section id="qui">
 
-      <!-- Bloc de textes (à gauche)-->
-       <div class="intro-texte">
+      <!-- Bloc de textes (à gauche) -->
+      <div class="intro-texte">
         <p class="numero">01 — Qui suis-je ?</p>
         <p class="accroche">Curieux de nature,<br>développeur en devenir.</p>
         <p class="presentation">En formation chez Holberton School, je recherche une alternance pour progresser au sein d'une équipe. J'aime comprendre comment les choses fonctionnent, et j'apporte à mon code le même soin qu'à mes créations.</p>
-       </div>
+      </div>
 
-       <!-- Emplacement de photo (à droite) -->
-        <div class="photo"></div>
+      <!-- Emplacement de la photo (à droite), remplacée plus tard par une vraie image -->
+      <div class="photo"></div>
 
     </section>
 
+    <!-- ===== 02 — Mon alternance ===== -->
     <section id="alternance">
 
       <div class="intro-texte">
@@ -59,7 +66,7 @@
         <p class="presentation">Une alternance en développement pour apprendre aux côtés d'une équipe, contribuer à des projets concrets et continuer à progresser chaque jour.</p>
       </div>
 
-        <!-- Les 4 cartes d'infos, côte à côte -->
+      <!-- Les 4 cartes d'infos, côte à côte -->
       <div class="infos-alternance">
 
         <div class="carte">
@@ -86,6 +93,7 @@
 
     </section>
 
+    <!-- ===== 03 — Ma formation ===== -->
     <section id="formation">
 
       <p class="numero">03 — Ma formation</p>
@@ -98,10 +106,9 @@
           <div class="logo-holberton"></div>
         </a>
 
-        <!-- Le texte de la formation -->
         <div class="presentation-holberton">
           <h2>Holberton School</h2>
-          <p class="dates">[dates] · [ville]</p>
+          <p class="dates">Depuis juin 2026 · Rennes</p>
           <p class="presentation">Formation intensive par projets et en peer learning : je développe mes compétences techniques, ma capacité à travailler en équipe et mon autonomie.</p>
         </div>
 
@@ -109,15 +116,15 @@
 
     </section>
 
+    <!-- ===== 04 — Compétences & outils ===== -->
     <section id="competences">
 
-      <!-- Bloc de textes -->
       <div class="intro-texte">
         <p class="numero">04 — Compétences & outils</p>
         <h2>Ma boîte à outils</h2>
       </div>
 
-      <!-- Les 4 cartes, côte à côte -->
+      <!-- Les 5 cartes, côte à côte -->
       <div class="cartes-competences">
 
         <div class="carte">
@@ -136,6 +143,7 @@
             <li>C</li>
             <li>Shell</li>
             <li>SQL</li>
+            <li>WebSocket</li>
           </ul>
         </div>
 
@@ -146,6 +154,15 @@
             <li>GitHub</li>
             <li>VS Code</li>
             <li>Figma</li>
+          </ul>
+        </div>
+
+        <div class="carte">
+          <h3 class="titre-carte">IA</h3>
+          <ul class="tags">
+            <li>Ollama</li>
+            <li>ADK</li>
+            <li>MCP</li>
           </ul>
         </div>
 
@@ -164,9 +181,9 @@
 
     </section>
 
+    <!-- ===== 05 — En cours d'apprentissage ===== -->
     <section id="apprentissage">
 
-      <!-- Bloc de textes -->
       <div class="intro-texte">
         <p class="numero">05 — En cours d'apprentissage</p>
         <h2>Ma progression</h2>
@@ -180,18 +197,20 @@
           <h3 class="titre-carte">Acquis</h3>
           <ul>
             <li>C : mémoire, pointeurs, listes chaînées</li>
-            <li>Python orienté objet</li>
-            <li>UML & design patterns</li>
+            <li>Python orienté objet, UML & design patterns</li>
             <li>SQL, ORM et API REST</li>
+            <li>JavaScript asynchrone et rendu côté serveur (SSR)</li>
+            <li>WebSocket : communication en temps réel</li>
+            <li>Agents IA et protocole MCP</li>
           </ul>
         </div>
 
         <div class="carte en-cours">
           <h3 class="titre-carte">En cours</h3>
           <ul>
-            <li>JavaScript asynchrone</li>
-            <li>Rendu côté serveur et côté client (SSR / CSR)</li>
             <li>Développement assisté par l'IA</li>
+            <li>Création d'agents avec ADK</li>
+            <li>IA en local avec Ollama</li>
           </ul>
         </div>
 
@@ -207,9 +226,9 @@
 
     </section>
 
+    <!-- ===== 06 — Côté artiste ===== -->
     <section id="artiste">
 
-      <!-- Bloc de textes -->
       <div class="intro-texte">
         <p class="numero">06 — Côté artiste</p>
         <h2>Mes créations en parallèle</h2>
@@ -223,11 +242,11 @@
         <div class="oeuvre"></div>
       </div>
 
-      <!-- Lien vers ArtStation-->
       <a href="https://www.artstation.com/korb" class="bouton bouton-secondaire" target="_blank" rel="noopener">Voir mon ArtStation</a>
 
     </section>
 
+    <!-- ===== 07 — Contact ===== -->
     <section id="contact">
 
       <p class="numero">07 — Contact</p>

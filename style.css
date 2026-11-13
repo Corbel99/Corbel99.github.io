@@ -158,6 +158,7 @@ h2 {
   display: flex;                          /* côte à côte (direction par défaut : ligne) */
   align-items: center;                    /* centrés verticalement, comme dans Figma */
   gap: 48px;
+  flex-direction: row;                    /* côte à côte */
 }
 
 #qui .intro-texte {
@@ -169,4 +170,98 @@ h2 {
   height: 450px;
   flex-shrink: 0;                         /* la photo garde sa taille */
   background-color: var(--fond-secondaire);  /* rectangle provisoire */
+}
+
+/* ===== Toutes les sections ===== */
+section {
+  display: flex;
+  flex-direction: column;                 /* les blocs les uns sous les autres */
+  gap: 24px;                              /* espacement Figma */
+}
+
+/* ===== Les cartes (style commun) ===== */
+.carte {
+  background-color: var(--fond-secondaire);
+  padding: 24px;                          /* marges Figma */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                               /* espacement Figma entre l'étiquette et l'info */
+}
+
+/* ===== Section 02 : les 4 cartes côte à côte ===== */
+.infos-alternance {
+  display: flex;                          /* côte à côte */
+  gap: 16px;
+}
+
+.infos-alternance .carte {
+  flex: 1;                                /* les 4 cartes se partagent la largeur à parts égales */
+}
+
+/* Le petit titre gris : RYTHME, DÉMARRAGE… */
+.etiquette {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* L'info, plus visible */
+.info {
+  margin: 0;
+  color: var(--titres);
+}
+
+/* ===== Section 03 : Ma formation ===== */
+.formation-contenu {
+  display: flex;                          /* logo et texte côte à côte */
+  align-items: center;                    /* centrés verticalement */
+  gap: 48px;
+}
+
+.logo-holberton {
+  width: 200px;
+  height: 140px;
+  background-color: var(--fond-secondaire);  /* rectangle provisoire */
+}
+
+.presentation-holberton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* La ligne [dates] · [ville] : style "Petit texte" */
+.dates {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* ===== Section 04 : les 4 cartes côte à côte ===== */
+.cartes-competences {
+  display: flex;
+  gap: 16px;
+}
+
+.cartes-competences .carte {
+  flex: 1;                                /* largeurs égales */
+  gap: 16px;                              /* espacement Figma entre le titre et les tags */
+}
+
+/* ===== Les tags ===== */
+.tags {
+  list-style: none;                       /* supprime les puces */
+  margin: 0;
+  padding: 0;
+  display: flex;                          /* les tags côte à côte */
+  flex-wrap: wrap;                        /* retour à la ligne quand il n'y a plus de place */
+  gap: 8px;
+}
+
+.tags li {
+  padding: 6px 12px;                      /* marges Figma */
+  border: 1px solid var(--texte-secondaire);  /* le contour */
+  font-size: 13px;
+  color: var(--titres);
 }
